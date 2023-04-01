@@ -1,0 +1,21 @@
+{
+  "name": "fe_59_nodejs_intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/splean101/FE_59_NodeJS_Intro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/splean101/FE_59_NodeJS_Intro/issues"
+  },
+  "homepage": "https://github.com/splean101/FE_59_NodeJS_Intro#readme"
+}
