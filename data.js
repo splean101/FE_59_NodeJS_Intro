@@ -11,26 +11,26 @@ const users = [
 ];
 
 //--------2---------
-// fs.writeFile('data.json', `{"users": ${JSON.stringify(users)}}`, (err) => {
-//   if (err) {
-//     console.error(err);
-//   } else {
-//     console.log('Data written to file');
-//   }
-// });
+fs.writeFile('data.json', `{"users": ${JSON.stringify(users)}}`, (err) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log('Data written to file');
+  }
+});
 
 //--------2---------
-// fs.writeFile(
-//   `${path.join(os.homedir(), '/user.js')}`,
-//   `${JSON.stringify(users)}`,
-//   (err) => {
-//     if (err) {
-//       console.error(err);
-//     } else {
-//       console.log('Data written to file');
-//     }
-//   }
-// );
+fs.writeFile(
+  `${path.join(os.homedir(), '/user.js')}`,
+  `${JSON.stringify(users)}`,
+  (err) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log('Data written to file');
+    }
+  }
+);
 
 //--------3---------
 const newData = [
@@ -58,5 +58,17 @@ async function readData() {
   });
 }
 readData();
-// dataFromDataJson = await
-// console.log(dataFromDataJson);
+
+//--------4---------
+
+async function isExist(filePath) {
+  try {
+    await promises.stat(filePath);
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+
+const fileExists = await isExist('./data.jsn');
+console.log(fileExists);
